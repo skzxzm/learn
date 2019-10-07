@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>超链接</title>
+</head>
+<body>
+    <!-- 
+        使用超链接可以让我们从一个页面跳转到另一个页面
+        使用a标签来创建一个超链接
+        属性：
+            -href:指向链接跳转的目标地址，可以写一个相对路径也可以写一个完整的地址
+            -target: 规定在何处打开链接
+                _blank 表示在新的标签页中打开链接
+                _parent
+                _self 表示在当前窗口中打开（默认值）
+                可以设置一个内联框架的name属性值，链接将会在指定的内联框架中打开
+     -->
+     <a href="http://www.baidu.com">百度</a>
+     <br>
+     <a href="http://www.bilibili.com">B站</a>
+     <br>
+     <!-- 在内联框架中打开meta标签 -->
+     <a href="meta标签.html" target="tom">meta标签</a>
+     <br><br>
+     <iframe src="实体.html" frameborder="1" name="tom"></iframe>
+
+     <!-- 
+         center标签中的内容，会默认在页面中居中显示，我们可以将要居中的元素全都放进center中，不推荐使用
+      -->
+      <center><p>我是一个p标签</p></center>
+</body>
+</html>
