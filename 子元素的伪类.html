@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子元素的伪类</title>
+
+    <style type="text/css">
+        /* 
+        为第一个p标签设置一个背景颜色橘色
+            :first-child 可以选中第一个子元素
+
+            :last-child 可以选中最后一个子元素
+
+            :nth-child(你想选择的子元素) 可以选中任意位置的子元素
+                该选择器后边可以指定一个参数，指定要选中第几个子元素
+                子元素可选：
+                    even 表示偶数位置的子元素
+                    odd 表示奇数位置的子元素
+
+            :first-of-type
+            :last-of-type
+            :nth-of-type
+                和:first-child这些非常类似
+                只不过这些child是在所有的子元素中排列
+                而type是在当前类型的子元素中排列
+                child是大排列，在所有元素中排列，而type是小排列，仅在当前选中的元素中排列
+        
+        body > p:first-child{
+            background-color: orange;
+        }
+
+        p:last-child{
+            background-color: skyblue;
+        }
+
+        p:nth-child(3){
+            background-color:pink;
+        }
+
+        p:nth-child(even){
+            background-color:pink;
+        }
+
+        p:nth-child(odd){
+            background-color:pink;
+        }
+        */
+
+        p:first-of-type{
+            background-color: rosybrown;
+        }
+    </style>
+
+</head>
+<body>
+    <span>我是span</span>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+
+    <!-- <div>
+        <p>我是div中的p标签</p>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器的优先级</title>
+
+    <style type="text/css">
+
+        /* 
+        
+        当使用不同的选择器，选中同一个元素时，并且设置相同的样式时
+        这时样式之间产生了冲突，最终会采用哪个选择器定义的样式，由选择器的优先级（权重）决定
+        优先级高的优先显示
+        
+         */
+
+        .p1{
+            background-color: pink;
+        }
+    
+        p{
+            background-color: red;
+        }
+
+        #p2{
+            background-color: purple;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="p1" id="p2">我是一个段落</p>
+</body>
+</html>
