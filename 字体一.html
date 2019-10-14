@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>字体</title>
+    <style type="text/css">
+        .p1{
+            /* 设置字体颜色 */
+            color: red;
+            /* 设置文字大小，默认文字大小16px
+            font-size设置的并不是文字本身的大小
+                在页面中每个文字都是处在一个看不见的框中的
+                我们设置的font-size实际上时设置的格的高度，并不是字体的大小
+                一般情况下文字都要比这个格咬小一些，也有时会比格大
+                根据字体的不同，显示效果也不同 
+             */
+            font-size: 20px;
+            /* 设置字体 
+                    -当采用某种字体时，如果浏览器支持则使用该字体
+                        如果字体不支持，则使用默认字体
+                    -该样式可以同时指定多种字体，多个字体之间使用 , 分开
+                    -当采用多个字体时，浏览器会优先使用前面的字体
+                        如果前边没有，再尝试下一个
+                    -浏览器使用的字体默认就是计算机中的字体
+                        如果计算机中有，则使用，如果没有就不用
+                    -在开发中，如果字体太奇怪，用户少，尽量不要用
+                        有可能用户电脑里没有，就无法达到想要的效果
+            */
+            font-family: 华文彩云,arial,微软雅黑;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="p1">
+        我是一个p标签，ABCDEFGdfekhadf
+    </p>
+
+</body>
+</html>
