@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无序列表和有序列表</title>
+
+    <style type="text/css">
+        /* 去掉项目符号 */
+        ul{
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 
+        列表相当于超市购物时的购物清单
+            在HTML中也可以创建列表，在网页中有三种列表：
+                1.无序列表
+                2.有序列表
+                3.定义列表
+     -->
+     <!-- 
+         无序列表
+            -使用ul标签创建无序列表
+            -使用li在ul中创建一个一个的列表项
+                一个il就是一个列表项
+        通过type属性，可以修改无序列表的项目符号：
+            可选值：
+                disc默认值(实心圆点)
+                square(实心方块)
+                circle(空心圆)
+            注意：默认的项目符号我们一般都不使用，不同浏览器样式不一样
+                如果需要设置项目符号，可以采用为li设置背景图片的方式来显示
+
+            ul和li都是块元素
+      -->
+
+    <ul>
+        <li>西门大官人</li>
+        <li>柴大官人</li>
+        <li>许大官人</li>
+        <li>包大官人</li>
+    </ul>
+
+    <!-- 
+        有序列表和无序列表类似，只不过使用ol代替ul
+        有序列表使用有序的序号作为项目符号
+        type属性可以指定序号的类型
+            可选值：
+                1.默认值，使用阿拉伯数字
+                  A/a 采用小写或大写作为序号
+                  i/I 采用小写或者大写的罗马数字作为序号
+
+        ol也是块元素
+
+     -->
+
+     <ol type="A">
+         <li>结构</li>
+         <li>表现</li>
+         <li>行为</li>
+     </ol>
+
+     <!-- 
+        列表之间可以互相嵌套，可以在无序列表中放有序列表，也可以在有序列表中放无序列表
+        
+      -->
+
+    <p>菜谱</p>
+    <ul>
+        <li>
+            鱼香肉丝
+            <ol>
+                <li>鱼</li>
+                <li>香</li>
+                <li>肉丝</li>
+            </ol>
+        </li>
+        <li>
+            宫保鸡丁
+            <ul>
+                <li>宫</li>
+                <li>保</li>
+                <li>鸡丁</li>
+            </ul>
+        </li>
+        <li>青椒肉丝</li>
+        <li>鸡蛋番茄</li>
+    </ul>
+</body>
+</html>
