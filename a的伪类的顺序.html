@@ -14,7 +14,7 @@
             :visited
             :hover
             :active
-        而这4个选择器的优先级是一样的
+        而这4个选择器的优先级是一样的，但要按照link visited hover active的顺序写
          */ 
 
         a:link{
@@ -25,10 +25,12 @@
             color: red;
         }
 
+        /* 鼠标移入 */
         a:hover{
             color: orange;
         }
 
+        /* 正在点击 */
         a:active{
             color: cornflowerblue;
         }
