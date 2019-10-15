@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文本样式</title>
+
+    <style type="text/css">
+        .p1{
+            /* text-transform可以设置文本的小大写
+                可选值：
+                    none 默认值
+                    capitalize 单词的首字母大写，通过空格来识别单词
+                    uppercase 所有字母都大写
+                    lowercase 所有字母都小写
+
+             */
+            text-transform: capitalize;            
+        }
+        .p2{
+            /* 
+            text-decoration可以设置文本的修饰
+                可选值：
+                    none 不添加任何文本修饰
+                    underline 为文本添加下划线
+                    overline 为文本添加上划线
+                    line-through 为文本添加删除线
+             */
+            text-decoration: line-through;
+        }
+
+        a{
+            /* 超链接默认添加下划线，也就是超链接的text-decoration的默认值是underline
+                    如果需要去除超链接的下划线，需要将text-decoration设置成none
+             */
+             text-decoration: none;
+        }
+
+        .p3{
+            /* 
+            letter-spacing可以设置字符间的间距
+             */
+            letter-spacing: 1px;
+
+            /* 
+            word-spacing可以设置单词间的间距
+            就是设置词语词之间空格的大小
+             */
+            word-spacing: 20px;
+        }
+
+        .p5{
+            /* 
+            text-align用于设置文本的对齐方式
+                可选值：
+                    left 默认值，文本靠左对齐
+                    right 文本靠右对齐
+                    center 文本居中对齐
+                    justify 两端对齐 - 通过调整文本之间的空格大小，达到一个两端对齐的目的
+             */
+             text-align: justify;
+
+            /* text-indent用来设置首行缩进
+                当给他一个正值时，会自动向右缩进指定的像素
+                如果为他指定一个负值，则会向左移动指定的像素
+                    通过这种方式可以将一些不想显示的文字隐藏起来
+                这个值一般都会使用em作为单位
+            
+             */
+            text-indent: 2em;            
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 class="p5">我是一个h1</h1>
+    <p class="p4">
+        Life is like a box of cholocate,you never know what you will go to get.Miracles happen every day.
+    </p>
+    
+    <p class="p5">
+        中国人的优越感其实是建立在对他人的歧视之上的。
+        一只手握住另一只手，需要多么大的勇气，需要穿透多少乌云？
+        多少年过去了，桃花年年盛开，拆迁逼迫他们在忍和残忍之间做出一个选择。
+        不能只想着丢失了什么，更重要的是看看现场多了什么东西。
+        在很多案子中，凶手常常会回到案发现场，重温记忆，来满足变态的内心。
+    </p>
+
+    <p class="p3">
+        Life is like a box of cholocate,you never know what you will go to get.Miracles happen every day.
+    </p>
+    
+    <p class="p2">
+        中国人的优越感其实是建立在对他人的歧视之上的。
+        一只手握住另一只手，需要多么大的勇气，需要穿透多少乌云？
+    </p>
+
+    <a href="#">我是超链接</a>
+
+    <p class="p1">
+        Life is like a box of cholocate,you never know what you will go to get.Miracles happen every day.
+    </p>
+</body>
+</html>
