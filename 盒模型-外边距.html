@@ -45,8 +45,24 @@
             */
 
             /* 
-                margin还可以设置为auto
+                margin还可以设置为auto，auto一般只设置给水平方向的margin
+                    如果只指定左外边距或右外边距的margin为auto则会将外边距设置为最大值
+                    垂直方向外边距设置为auto，则外边距默认就是0
+
+                如果将left和right同时设置为auto，则会将两侧的外边距相同的值
+                    就可以使元素自动在父元素中居中显示，所以我妈经常将左右外边距设置为auto
+                    以使子元素在父元素中水平居中
              */
+             /* margin-left: auto;
+             margin-right: auto; */
+
+             /* 
+                外边距同样可以使用简写属性 margin，可以同时设置4格方向的外边距
+                规则和padding一样
+              */
+            margin: 10px 20px 30px 40px;
+            /* 上下外边距为0，左右为auto(即左右居中) */
+            margin: 0 atuo;
 
         }
 
