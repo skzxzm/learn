@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浏览器的默认样式</title>
+    <style type="text/css">
+
+    /* 
+        浏览器为了在页面中没有样式时，也可以让我页面有一个比较好的显示效果
+            所以为很多的元素设置了一些默认的mragin和padding。
+        而这些默认样式，正常情况下，我们不需要使用
+
+        所以往往在编写样式之前，需要将浏览器中默认的margin和padding统统去掉
+
+     */
+
+        /* 清除浏览器的默认样式 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+
+        p{
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <p>我是一个段落</p>
+    <p>我是一个段落</p>
+    <p>我是一个段落</p>
+
+    <ul>
+        <li>无序列表</li>
+        <li>无序列表</li>
+        <li>无序列表</li>
+        <li>无序列表</li>
+    </ul>
+</body>
+</html>

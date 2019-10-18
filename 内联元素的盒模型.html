@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内联元素的盒模型</title>
+    <style type="text/css">
+        /* 
+            总结：
+                1.内联元素不支持设置width和height
+                2.内联元素支持水平方向内边距，也可以设置垂直方向的内边距，但垂直方向的内边距不会影响页面布局
+                3.内联元素只支持水平方向的外边距
+        
+         */
+        span{
+            background-color: #777;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: darkgoldenrod;
+        }
+
+        .s1{
+            /* 
+                盒模型
+                    1.内容区
+                    2.内边距
+                    3.边框
+                    4.外边距
+            */
+            /* 
+                内联元素不能设置width和height
+            
+             width: 100px;
+             height: 100px;
+            */
+
+            /* 
+                内联元素可以设置水平方向内边距
+            */
+             padding-left: 100px;
+             padding-right: 100px;
+
+            /* 
+                内联元素可以设置垂直方向内边距，但是不会影响页面的布局
+            
+            padding-top: 50px;
+            padding-bottom: 50px;
+            */
+
+            /* 
+                内联元素可以设置边框，但是垂直方向的边框不会影响页面布局
+            
+             border: 50px blue solid;
+            */
+
+            /* 
+                内联元素支持水平方向外边距
+            */
+            margin-left: 100px;
+            margin-right: 100px;
+
+            /* 
+                内联元素不支持垂直外边距           
+            margin-top: 100px;
+            margin-bottom: 100px;
+            */
+
+            }
+
+        .s2{
+            /* 
+                为右边的内联元素设置一个左外边距
+                水平方向相邻的外边距不会重叠，而是求和
+             */
+            margin-left: 100px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <span class="s1">我是span</span>
+    <span class="s2">我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+
+    <div class="box1"></div>
+</body>
+</html>
