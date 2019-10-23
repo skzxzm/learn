@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动</title>
+
+    <style type="text/css">
+
+        /* 
+            块元素在文档流中默认垂直排列，所以这三个div自上而下依次排开
+                如果希望块元素在页面中水平排列，可以使块元素脱离文档流
+            使用float来使元素浮动，从而脱离文档流(继承性：no)
+            可选值：
+                none 默认值，元素默认在文档流中排列
+                left 元素会立即脱离文档流，向页面左侧浮动
+                right 元素会立即脱离文档流，向页面右侧浮动
+
+        */
+
+        .box1{
+            /* display: inline-block; */
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .box2{
+            /* display: inline-block; */
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            
+        }
+        .box3{
+            /* display: inline-block; */
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+</body>
+</html>
