@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简单布局</title>
+    <style type="text/css">
+        /* 清除默认样式 */
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .header{
+            width: 1000px;
+            height: 150px;
+            background-color: yellowgreen;
+        }
+
+        .content{
+            width: 1000px;
+            height: 400px;
+            background-color: orange;
+            margin: 10px auto;
+        }
+
+        /* 设置content中div的样式 */
+        .content_box1{
+            width: 200px;
+            height: 380px;
+            background-color: pink;
+            float: left;
+            margin: 10px;
+        }
+
+        .content_box2{
+            width: 560px;
+            height: 380px;
+            background-color: yellow;
+            float: left;
+            margin: 10px 0;
+        }
+
+        .center_box2_1{
+            width: 540px;
+            height: 175px;
+            background-color: salmon;
+            margin: 10px;
+        }
+
+        .center_box2_2{
+            width: 540px;
+            height: 175px;
+            background-color: aquamarine;
+            margin: 10px;
+        }
+
+        .content_box3{
+            width: 200px;
+            height: 380px;
+            background-color: silver;
+            float: left;
+            margin: 10px;
+        }
+
+        .footer{
+            width: 1000px;
+            height: 100px;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 头部div -->
+    <div class="header"></div>
+
+    <!-- 主体内容div -->
+    <div class="content">
+
+        <!-- 左侧div -->
+        <div class="content_box1"></div>
+        <!-- 中间div -->
+        <div class="content_box2">
+
+            <!-- 中间div中的小div -->
+            <div class="center_box2_1"></div>
+            <div class="center_box2_2"></div>
+
+        </div>
+        <!-- 右侧div -->
+        <div class="content_box3"></div>
+
+    </div>
+
+    <!-- 底部信息div -->
+    <div class="footer"></div>
+</body>
+</html>
