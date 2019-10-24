@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动二</title>
+    <style type="text/css">
+
+        /* 
+            浮动的元素不会盖住文字，文字会自动环绕在浮动元素的周围
+                所以可以通过浮动来设置文字环绕图片的效果
+         */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+
+            .box1{
+                width: 100px;
+                height: 100px;
+                background-color: #0000ff;
+                为box1设置浮动
+                float: left;
+            }
+
+            .p1{
+                background-color: #11ffff;
+            } 
+
+        */
+
+        /* 
+            在文档流中，子元素的宽度默认在父元素的全部
+
+            当元素设置浮动以后，会完全脱离文档流
+                块元素脱离文档流以后，高度和宽度都会被内容撑开
+
+            内联元脱离文档流以后会变成块元素，可以设置宽高
+                也就是说一旦脱离文档流，所有元素都变成块元素
+
+         */
+        .box2{
+            /* height: 100px; */
+            background-color: #ffff11;
+            /* float: left; */
+        }
+
+        /* 
+            开启span.s1的浮动
+         */
+        .s1{
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--
+    <div class="box1"></div>
+
+     
+        <p class="p1">
+
+            中国人的优越感其实是建立在对他人的歧视之上的。
+            一只手握住另一只手，需要多么大的勇气，需要穿透多少乌云？
+            多少年过去了，桃花年年盛开，拆迁逼迫他们在忍和残忍之间做出一个选择。
+            不能只想着丢失了什么，更重要的是看看现场多了什么东西。
+            在很多案子中，凶手常常会回到案发现场，重温记忆，来满足变态的内心。
+
+        </p> 
+    -->
+
+    <div class="box2">中国人的优越感其实是建立在对他人的歧视之上的。</div>
+    <span class="s1">hello</span>
+
+</body>
+</html>
