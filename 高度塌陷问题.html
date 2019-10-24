@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高度塌陷问题[为让父元素可以包含浮动子元素]</title>
+    <style type="text/css">
+        .box1{
+            /* 为box1设置边框 */
+            border: 10px red solid;
+            overflow: hidden;
+
+            /* 
+                但是在IE6及一下的浏览器中并不支持BFC，所以使用这种方式不能兼容IE6
+                    在IE6中虽然没有BFC，但是具有另一个隐含的属性叫hasLayout,
+                        该属性的作用和BFC类似，所以IE6浏览器中可以通过开启hasLayout来解决该问题
+                    开启方式很多，直接使用副作用最小的：
+                        直接将元素的zoom设置为1即可
+                            语法：     zoom: 1;
+                        zoom表示放大的意思，后面跟一个数值，写几就将元素放大几倍
+                        zoom： 1表示不放大元素，但是通过该样式可以开启hasLayout
+                        
+                        这种方式只支持ie6,别的浏览器都不支持
+                            所以在开发的时候两种方法都要写，才能兼容所有浏览器
+
+            /* 
+                根据W3C标准，在页面中元素都有一个隐含的属性叫做Block Formatting Context（块级格式化环境）
+                    简称BFC，该属性可以设置打开或者关闭，默认是关闭的。
+                当开启元素BFC以后，元素将会具有如下特性：
+                    1.父元素垂直的外边距不会和子元素重叠
+                    2.开启BFC的元素不会被浮动元素所覆盖
+                    3.开启BFC的元素可以包含浮动的子元素
+
+                如何开启元素的BFC
+                    1.设置元素浮动(不推荐使用)
+                        - 使用这种方式开启，虽然可以撑开父元素，但会导致父元素宽度丢失
+                            而且使用这种方式也会导致下边的元素上移，无法解决问题
+
+                    2.设置元素绝对定位(与设置浮动一样不推荐使用)
+
+                    3.设置元素display: inline-block (不推荐使用)
+                        - 可以解决问题，但会导致父元素宽度丢失
+
+                    3.将元素的overflow设置为一个非visible的值
+                    
+                    推荐方式：将overflow设置为hidden是副作用最小的开始BFC的方式。[不是最好的方法]]
+             */
+
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            float: left;
+
+            /* 
+                在文档流中，父元素的高度默认是被子元素撑开的
+                    也就是子元素多高，父元素就多高
+                但是当为子元素设置浮动以后，子元素脱离文档流
+                    此时将会导致子元素无法撑起父元素的高度，导致父元素高度塌陷
+                由于父元素的高度塌陷了，则父元素下的所有元素都会上移，这样会导致页面布局混乱
+
+                在开发中要避免出现高度塌陷的问题
+                    1.我们可以将父元素的高度固定，以避免塌陷问题出现
+                        但高度一旦固定，父元素将不能自动适应子元素的高度，所以这种方案不推荐使用
+                    
+                    
+            */
+             float: left;
+        }
+
+        .box3{
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+</body>
+</html>

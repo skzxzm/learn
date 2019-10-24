@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航条</title>
+    <style type="text/css">
+        *{
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+            /* 去除项目符号 */
+            list-style: none;
+            /* 为ul设置背景颜色 */
+            background-color: skyblue;
+            /* 
+                设置宽度 
+                    在ie6中，如果为元素指定了宽度，则会默认开启hasLayout
+            */
+            width: 1000px;
+            /* 设置元素居中 */
+            margin: 20px auto;
+            /* 解决高度塌陷 */
+            overflow: hidden;
+        }
+
+        .nav li{
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+
+        <ul class="nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">联系</a></li>
+            <li><a href="#">关于</a></li>
+        </ul>
+
+</body>
+</html>
