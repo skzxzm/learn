@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio 标签用来向页面中引用外部音频文件
+            音视频文件引入时，默认情况下不允许用户自己控制播放停止
+        
+        属性：
+            controls 是否允许用户控制播放
+            autoplay 音频文件是否自动播放
+                - 如果设置了autoplay 则音乐在打开页面时会自动播放
+                    但是目前大部分浏览器都不会对音乐进行自动播放（为了提升用户体验）
+            loop 循环播放
+     -->
+    <audio src="./source/Waltz Finale - 이남연.mp3" controls>Waltz Finale - 이남연</audio>
+     <br>
+     <br>
+     <br>
+
+    <!-- 
+        除了通过src来指定外部文件的路径以外，还可以通过source来指定文件 
+        
+        可以写多个source标签，为避免某些浏览器不支持音频格式
+            如果第一个格式浏览器不支持，则会直接使用第二个
+    -->
+    <audio controls>
+        对不起，您的浏览器不支持播放音频！请升级浏览器！
+        <source src="./source/Waltz Finale - 이남연.mp3">
+        <source src="./source/电台情歌 - 莫文蔚.mp3">
+    </audio>
+
+    <!-- 
+        可以在老版本的浏览器里兼容引用音视频文件 
+            会自动播放
+            需要设置宽高和type属性(指定文件类型)，不好用
+            还需要设置type属性(不好用)
+                type="audio/mp3"
+                前面指定外部文件的大类型(audio或者video)
+                后面表示文件的具体格式(mp3或者ogg)
+
+    <embed src="./source/电台情歌 - 莫文蔚.mp3" type="audio/mp3" width="500" height="100">
+    -->
+    
+    <!-- 
+        如果想全部兼容，可以将embed标签放入audio标签里
+
+        <audio controls>
+            <source src="./source/Waltz Finale - 이남연.mp3">
+            <source src="./source/电台情歌 - 莫文蔚.mp3">
+            <embed src="./source/电台情歌 - 莫文蔚.mp3" type="audio/mp3" width="500" height="100">
+        </audio>
+     -->
+
+    <!-- 
+        使用video标签向网页中引入一个视频文件
+            - 使用方式和audio基本一样
+        
+     -->
+    <video controls>
+        <source src="./source/we don't talk anymore.webm">
+        <source src="./source/we don't talk anymore.mp4">
+        <embed src="./source/we don't talk anymore.mp4" type="video/mp4">
+    </video>
+
+    <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e01902boa1v" allowFullScreen="true" width="800" height="600"></iframe>
+
+</body>
+</html>
