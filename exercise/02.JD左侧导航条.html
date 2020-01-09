@@ -31,6 +31,7 @@
             height: 25px;
             /* 让文字在父元素中垂直居中，只需将父元素的line-height设置成和父元素height一样的高度 */
             line-height: 25px;
+            /* 设置超链接样式 将文字向内移动*/
             padding-left: 18px;
         }
 
@@ -40,8 +41,20 @@
         }
 
         .item a{
+            /* 设置字体大小 */
+            font-size: 14px;
+            /* 去除下划线 */
             text-decoration: none;
+            /* 设置字体颜色 */
             color: #333;
+        }
+        /* 设置超链接移入的样式 */
+        .item a:hover{
+            color: #c81623;
+        }
+        span .slash{
+            font-size: 12px;
+            padding: 0 2px;
         }
     </style>
 </head>
@@ -52,102 +65,138 @@
         </div>
 
         <div class="item">
-            <a href="javascript:;">手机</a>/
-            <a href="javascript:;">运营商</a>/
+            <a href="javascript:;">手机</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">运营商</a>
+            <span class="slash">/</span>
             <a href="javascript:;">数码</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">电脑</a>/
+            <a href="javascript:;">电脑</a>
+            <span class="slash">/</span>
             <a href="javascript:;">办公</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">家居</a>/
-            <a href="javascript:;">家具</a>/
-            <a href="javascript:;">家装</a>/
+            <a href="javascript:;">家居</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">家具</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">家装</a>
+            <span class="slash">/</span>
             <a href="javascript:;">厨具</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">男装</a>/
-            <a href="javascript:;">女装</a>/
-            <a href="javascript:;">童装</a>/
+            <a href="javascript:;">男装</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">女装</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">童装</a>
+            <span class="slash">/</span>
             <a href="javascript:;">内衣</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">美妆</a>/
-            <a href="javascript:;">个护清洁</a>/
+            <a href="javascript:;">美妆</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">个护清洁</a>
+            <span class="slash">/</span>
             <a href="javascript:;">宠物</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">女鞋</a>/
-            <a href="javascript:;">箱包</a>/
-            <a href="javascript:;">钟表</a>/
+            <a href="javascript:;">女鞋</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">箱包</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">钟表</a>
+            <span class="slash">/</span>
             <a href="javascript:;">珠宝</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">男鞋</a>/
-            <a href="javascript:;">运动</a>/
+            <a href="javascript:;">男鞋</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">运动</a>
+            <span class="slash">/</span>
             <a href="javascript:;">户外</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">房产</a>/
-            <a href="javascript:;">汽车</a>/
+            <a href="javascript:;">房产</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">汽车</a>
+            <span class="slash">/</span>
             <a href="javascript:;">汽车用品</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">母婴</a>/
+            <a href="javascript:;">母婴</a>
+            <span class="slash">/</span>
             <a href="javascript:;">玩具乐器</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">食品</a>/
-            <a href="javascript:;">酒类</a>/
-            <a href="javascript:;">生鲜</a>/
+            <a href="javascript:;">食品</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">酒类</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">生鲜</a>
+            <span class="slash">/</span>
             <a href="javascript:;">特产</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">艺术</a>/
-            <a href="javascript:;">礼品鲜花</a>/
+            <a href="javascript:;">艺术</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">礼品鲜花</a>
+            <span class="slash">/</span>
             <a href="javascript:;">农资绿植</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">医药保健</a>/
+            <a href="javascript:;">医药保健</a>
+            <span class="slash">/</span>
             <a href="javascript:;">计生情趣</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">图书</a>/
-            <a href="javascript:;">文娱</a>/
+            <a href="javascript:;">图书</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">文娱</a>
+            <span class="slash">/</span>
             <a href="javascript:;">电子书</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">机票</a>/
-            <a href="javascript:;">酒店</a>/
-            <a href="javascript:;">旅游</a>/
+            <a href="javascript:;">机票</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">酒店</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">旅游</a>
+            <span class="slash">/</span>
             <a href="javascript:;">生活</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">理财</a>/
-            <a href="javascript:;">众筹</a>/
-            <a href="javascript:;">白条</a>/
+            <a href="javascript:;">理财</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">众筹</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">白条</a>
+            <span class="slash">/</span>
             <a href="javascript:;">保险</a>
         </div>
 
         <div class="item">
-            <a href="javascript:;">安装</a>/
-            <a href="javascript:;">维修</a>/
-            <a href="javascript:;">清洗</a>/
+            <a href="javascript:;">安装</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">维修</a>
+            <span class="slash">/</span>
+            <a href="javascript:;">清洗</a>
+            <span class="slash">/</span>
             <a href="javascript:;">二手</a>
         </div>
 
